@@ -1,5 +1,5 @@
 # StintCoin
-Shell script to install a [StintCoin Masternode](http://stintcoin.com/) on a Linux server running Ubuntu 16.04 or higher. Use it on your own risk.
+Shell script to install a [StintCoin Masternode](http://stintcoin.io/) on a Linux server running Ubuntu 16.04 or higher. Use it on your own risk.
 ***
 
 ## Installation
