@@ -82,7 +82,6 @@ function downloadNode() {
     echo -e "[5/${STEPS}] Downloading masternode..."
     cd $TMP_FOLDER >/dev/null 2>&1
     wget -q $COIN_TGZ
-    compile_error
     chmod 755 $COIN_DAEMON $COIN_CLI > /dev/null 2>&1
     echo -e "${GREEN}* Done${NONE}"
 }
