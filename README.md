@@ -1,5 +1,5 @@
 # StintCoin
-Shell script to install a [StintCoin Masternode](http://stintcoin.io/) on a Linux server running Ubuntu 16.04. Use it on your own risk.
+Shell script to install a [StintCoin Masternode](http://stintcoin.com/) on a Linux server running Ubuntu 16.04 or higher. Use it on your own risk.
 ***
 
 ## Installation
@@ -26,13 +26,13 @@ After the MN is up and running, you need to configure the desktop wallet accordi
 Alias Address Privkey TxHash TxIndex
 ```
 * Alias: **MN1**
-* Address: **VPS_IP:4350**
+* Address: **VPS_IP:27501**
 * Privkey: **Masternode Private Key**
 * TxHash: **First value from masternode outputs**
 * TxIndex:  **Second value from masternode outputs**
 ```
 Example: 
-mn1 127.0.0.1:4350 SgHYBVUCYjEMeeH1Y4sBGLALQZE1Yc1K64xiqgXgf4GBDQL8Xg 45cd3c84c84f87eaa86e4e56834c92927a07f9e18718810b92e0d0324456a67c 0
+mn1 127.0.0.1:27501 SkfYBVUCYjEMeeH1Y4sBGLALQZE1Yc1K64xyggXgf4GBDQL8Xg 54gd3c84c84f87eaa86e4e56834c92927a07f9e18718810b92e0d0324456a67c 0
 
 ```
 9. Save and close the file.
