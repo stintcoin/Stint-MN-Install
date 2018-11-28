@@ -152,7 +152,7 @@ function configureNode() {
     $COINDAEMONCLI stop > /dev/null 2>&1
     sleep 5
 
-    echo -e "rpcuser=${rpcuser}\nrpcpassword=${rpcpass}\nrpcallowip=127.0.0.1\nport=${port}\nrpcport=${rpcport}\ndaemon=1\nserver=1\nlisten=1\nlogtimestamps=1\nmaxconnections=256\nmasternode=1\nexternalip=${mnip}\nmasternodeprivkey=${COINKEY}" > $CONFIGFOLDER$CONFIG_FILE
+    echo -e "rpcuser=${rpcuser}\nrpcpassword=${rpcpass}\nrpcallowip=127.0.0.1\nport=${port}\nrpcport=${rpcport}\ndaemon=1\nserver=1\nlisten=1\nlogtimestamps=1\nmaxconnections=256\nmasternode=1\nexternalip=${mnip}\nmnip=${mnip}\nmasternodeprivkey=${COINKEY}" > $CONFIGFOLDER$CONFIG_FILE
     echo -e "${GREEN}* Done${NONE}"
 }
 
