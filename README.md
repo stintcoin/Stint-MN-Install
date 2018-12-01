@@ -47,6 +47,11 @@ masternode start-alias MN1
 ```
 stintcoin-cli masternode status
 ```
+If you get an error and your masternode isn't running, try stopping and restarting the masternode by doing the following:
+```
+stintcoin-cli stop
+stintcoind
+```
 ***
 
 ## Usage:
