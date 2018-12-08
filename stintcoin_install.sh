@@ -120,7 +120,7 @@ function configureNode() {
     echo -e "[9/${STEPS}] Configuring masternode..."
     $COIN_PATH$COIN_DAEMON -daemon > /dev/null 2>&1
     sleep 5
-    $COINDAEMONCLI stop > /dev/null 2>&1
+    $COIN_CLI stop > /dev/null 2>&1
     sleep 5
 
     mnip=$(curl --silent ipinfo.io/ip)
@@ -149,8 +149,8 @@ function configureNode() {
       fi
     fi
 
-    $COINDAEMONCLI stop > /dev/null 2>&1
-    sleep 10
+    $COIN_CLI stop > /dev/null 2>&1
+    sleep 5
 
     echo -e "rpcuser=${rpcuser}\nrpcpassword=${rpcpass}\nrpcallowip=127.0.0.1\nport=${port}\nrpcport=${rpcport}\ndaemon=1\nserver=1\nlisten=1\nlogtimestamps=1\nmaxconnections=256\nmasternode=1\nexternalip=${mnip}\nmnip=${mnip}\nmasternodeprivkey=${COINKEY}" > $CONFIGFOLDER$CONFIG_FILE
     echo -e "${GREEN}* Done${NONE}"
