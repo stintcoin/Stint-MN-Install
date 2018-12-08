@@ -154,11 +154,12 @@ function configureNode() {
 
     echo -e "rpcuser=${rpcuser}\nrpcpassword=${rpcpass}\nrpcallowip=127.0.0.1\nport=${port}\nrpcport=${rpcport}\ndaemon=1\nserver=1\nlisten=1\nlogtimestamps=1\nmaxconnections=256\nmasternode=1\nexternalip=${mnip}\nmnip=${mnip}\nmasternodeprivkey=${COINKEY}" > $CONFIGFOLDER$CONFIG_FILE
     echo -e "${GREEN}* Done${NONE}"
+    sleep 5
 }
 
 function startNode() {
     echo -e "[10/${STEPS}] Starting masternode..."
-    $COIN_PATH$COINDAEMON -daemon > /dev/null 2>&1
+    $COIN_DAEMON > /dev/null 2>&1
     sleep 5
     echo -e "${GREEN}* Done${NONE}"
 }
