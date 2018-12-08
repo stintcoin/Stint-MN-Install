@@ -120,7 +120,7 @@ function configureNode() {
     echo -e "[9/${STEPS}] Configuring masternode..."
     $COIN_PATH$COIN_DAEMON -daemon > /dev/null 2>&1
     sleep 5
-    $COIN_CLI stop > /dev/null 2>&1
+    $COIN_PATH$COIN_CLI stop > /dev/null 2>&1
     sleep 5
 
     mnip=$(curl --silent ipinfo.io/ip)
@@ -158,7 +158,7 @@ function configureNode() {
 
 function startNode() {
     echo -e "[10/${STEPS}] Starting masternode..."
-    $COINDAEMON > /dev/null 2>&1
+    $COIN_PATH$COINDAEMON -daemon > /dev/null 2>&1
     sleep 5
     echo -e "${GREEN}* Done${NONE}"
 }
