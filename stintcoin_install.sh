@@ -80,19 +80,19 @@ bsdmainutils libdb4.8++-dev libminiupnpc-dev libgmp3-dev ufw pkg-config libevent
 
 function downloadNode() {
     echo -e "[5/${STEPS}] Downloading masternode..."
-    cd $TMP_FOLDER >/dev/null 2>&1
+    cd $TMP_FOLDER #>/dev/null 2>&1
     wget -q $COIN_TGZ
-    chmod 755 $COIN_DAEMON $COIN_CLI > /dev/null 2>&1
+    chmod 755 $COIN_DAEMON $COIN_CLI #> /dev/null 2>&1
     echo -e "${GREEN}* Done${NONE}"
 }
 
 function installNode() {
   echo -e "[6/${STEPS}] Installing masternode..."
-  tar xvzf $COIN_ZIP --strip 2 >/dev/null 2>&1
+  tar xvzf $COIN_ZIP --strip 2 #>/dev/null 2>&1
   chmod +x $COIN_DAEMON $COIN_CLI
   cp $COIN_DAEMON $COIN_CLI $COIN_PATH
-  cd - >/dev/null 2>&1
-  rm -rf $TMP_FOLDER >/dev/null 2>&1
+  cd - #>/dev/null 2>&1
+  rm -rf $TMP_FOLDER #>/dev/null 2>&1
   cd
   echo -e "${GREEN}* Done${NONE}"
 }
